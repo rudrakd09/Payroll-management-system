@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rudra Kuntedeshmukh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">Rudra<span>.</span></div>
+
+  <nav id="navMenu" class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button id="themeToggle">🌙</button>
+    <button id="hamburger">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero fade-in">
+  <img src="assets/images/profile.jpg" class="avatar">
+
+  <p class="intro">Hi! I'm</p>
+  <h1>Rudra Kuntedeshmukh</h1>
+  <h2>ECE Student | Data Science | ML | EV Systems</h2>
+
+  <p class="hero-desc">
+    Passionate engineering student focused on machine learning,
+    data analytics, embedded systems, and electric vehicle technologies.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn gradient">View Projects</a>
+    <a href="assets/resume/Resume_Rudra_Kuntedeshmukh.pdf"
+       class="btn outline" download>
+      Download Resume
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats fade-in">
+  <div class="stat-card">
+    <span class="counter" data-target="9">0</span>
+    <p>CGPA</p>
+  </div>
+  <div class="stat-card">
+    <span class="counter" data-target="4">0</span>
+    <p>Projects</p>
+  </div>
+  <div class="stat-card">
+    <span class="counter" data-target="6">0</span>
+    <p>Certifications</p>
+  </div>
+  <div class="stat-card">
+    <span class="counter" data-target="2">0</span>
+    <p>Years Learning</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade-in">
+  <h2>About Me</h2>
+
+  <h3>Personal Details</h3>
+  <p>B.Tech ECE student at MIT World Peace University with CGPA 9.0.</p>
+
+  <h3>Skills</h3>
+  <ul>
+    <li>Python, Machine Learning, Data Analysis</li>
+    <li>C / C++ / Java</li>
+    <li>HTML, CSS, JavaScript</li>
+    <li>EV & Embedded Systems Fundamentals</li>
+  </ul>
+
+  <h3>Career Objective</h3>
+  <p>
+    To secure an internship or entry-level role where I can apply my
+    technical knowledge and contribute to real-world solutions.
+  </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade-in">
+  <h2>My Projects</h2>
+
+  <div class="cards">
+    <div class="project-card tilt">
+      <img src="assets/images/projects/stock.jpg">
+      <h3>Stock Prediction using Python</h3>
+      <p>ML-based time-series stock prediction.</p>
+      <a href="https://github.com/rudrakd09/ML-Projects/blob/main/Stock_Prediction_using_python.ipynb" target="_blank">
+        View on GitHub →
+      </a>
+    </div>
+
+    <div class="project-card tilt">
+      <img src="assets/images/projects/complaint.jpg">
+      <h3>Consumer Complaint Resolution</h3>
+      <p>Data analytics on complaint datasets.</p>
+      <a href="https://github.com/rudrakd09/ML-Projects/blob/main/Consumer_Complaint_Resolution.ipynb" target="_blank">
+        View on GitHub →
+      </a>
+    </div>
+
+    <div class="project-card tilt">
+      <img src="assets/images/projects/twitter.jpg">
+      <h3>Twitter Sentiment Analysis</h3>
+      <p>NLP-based sentiment classification.</p>
+      <a href="https://github.com/rudrakd09/ML-Projects/blob/main/Twitter_Sentiment_Analysis.ipynb" target="_blank">
+        View on GitHub →
+      </a>
+    </div>
+
+    <div class="project-card tilt">
+      <img src="assets/images/projects/movie.jpg">
+      <h3>Movie Recommender System</h3>
+      <p>Content-based recommendation engine.</p>
+      <a href="https://github.com/rudrakd09/ML-Projects/blob/main/Movie_Recommender_System.py" target="_blank">
+        View on GitHub →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="section fade-in">
+  <h2>Articles & Learning</h2>
+  <div class="cards">
+    <div class="glass-card tilt">AI in Electric Vehicles</div>
+    <div class="glass-card tilt">Python for Data Analysis</div>
+    <div class="glass-card tilt">Introduction to Machine Learning</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section fade-in">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm">
+    <input id="name" placeholder="Your Name">
+    <input id="email" type="email" placeholder="Your Email">
+    <textarea id="message" placeholder="Your Message"></textarea>
+    <button class="btn gradient">Send Message</button>
+    <p id="formMsg"></p>
+  </form>
+</section>
+
+<footer>
+  © 2026 Rudra Kuntedeshmukh
+</footer>
+
+</body>
+</html>
+

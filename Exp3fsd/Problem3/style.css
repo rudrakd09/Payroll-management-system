@@ -1,0 +1,20 @@
+body { 
+    background: linear-gradient(to right, #8e2cc8, #c23a7a, #e5793c); 
+    min-height: 100vh; 
+     display: flex; 
+    align-items: center;   /* vertical center */ 
+    justify-content: center; /* horizontal center */ 
+} 
+ 
+.activity-box { 
+    background-color: #f8f9fa; 
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-top: 15px; 
+    height: 30vh; 
+} 
+ 
+.card { 
+    border-radius: 15px; 
+} 
+cd path/to/your/Exp3FSD

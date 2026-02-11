@@ -1,0 +1,155 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+    <title>Dynamic Web Page using DOM and jQuery</title> 
+ 
+    <!-- jQuery CDN --> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+ 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+        } 
+ 
+        #myDiv { 
+            border: 1px solid black; 
+            padding: 10px; 
+            margin-bottom: 10px; 
+        } 
+ 
+        .myPara { 
+            margin-bottom: 5px; 
+        } 
+ 
+        #myImage { 
+            width: 200px; 
+            height: 200px; 
+        } 
+ 
+        #bgDiv { 
+            width: 300px; 
+            height: 100px; 
+            border: 1px solid black; 
+            margin-top: 20px; 
+        } 
+ 
+        button { 
+            margin: 5px 0; 
+            padding: 6px 10px; 
+        } 
+    </style> 
+</head> 
+<body> 
+<h1>Dynamic Web Page using JavaScript DOM and jQuery</h1> 
+<!-- DOM Elements --> 
+<div id="myDiv">This is a div.</div> 
+<button onclick="changeDivText()">Change Div Text</button> 
+<p class="myPara">Manali is a perfect destination to enjoy a fun-filled trip 
+with friends.</p> 
+<p class="myPara">The trip became even more special with adventure 
+activities.</p> 
+<button onclick="changeParaColor()">Change Paragraph Color</button> 
+<button onclick="moveParagraph()">Move Paragraph</button> 
+<br><br> 
+<img id="myImage" src="1.jpeg"> 
+<br> 
+<button id="changeImageBtn">Change Image</button> 
+<br><br> 
+<div id="parentDiv"> 
+<p id="toDelete">This paragraph will be deleted.</p> 
+</div> 
+<button id="addTextBtn">Add Text Node</button> 
+<button id="deleteNodeBtn">Delete Node</button> 
+<hr> 
+<!-- jQuery Section --> 
+<h3>jQuery Operations</h3> 
+<form id="myForm"> 
+<input type="text" id="name" placeholder="Enter your name"> 
+<input type="email" id="email" placeholder="Enter your email"> 
+<button type="submit" id="submitBtn">Submit</button> 
+</form> 
+<button id="jqueryBtn">jQuery Button</button> 
+<div id="bgDiv">Background image set using jQuery</div> 
+<script> 
+/* ========================= 
+JAVASCRIPT DOM 
+========================= */ 
+function changeDivText() { 
+    document.getElementById("myDiv").innerHTML = 
+        "Text changed using getElementById and innerHTML!"; 
+} 
+ 
+function changeParaColor() { 
+    let paragraphs = document.getElementsByTagName("p"); 
+    for (let i = 0; i < paragraphs.length; i++) { 
+        paragraphs[i].style.color = "blue"; 
+    } 
+} 
+ 
+function moveParagraph() { 
+    let myParas = document.getElementsByClassName("myPara"); 
+    for (let i = 0; i < myParas.length; i++) { 
+        myParas[i].style.position = "relative"; 
+        myParas[i].style.left = "20px"; 
+    } 
+} 
+ 
+document.getElementById("changeImageBtn").onclick = function () { 
+    document.getElementById("myImage").src = 
+        "https://via.placeholder.com/200?text=New+Image"; 
+}; 
+ 
+document.getElementById("addTextBtn").onclick = function () { 
+    let textNode = document.createTextNode(" New text node added."); 
+    document.getElementById("parentDiv").appendChild(textNode); 
+}; 
+ 
+document.getElementById("deleteNodeBtn").onclick = function () { 
+    let node = document.getElementById("toDelete"); 
+    if (node) { 
+        node.remove(); 
+    } 
+}; 
+ 
+/* ========================= 
+   jQuery 
+========================= */ 
+$(document).ready(function () { 
+ 
+    // Change button text using jQuery 
+    $("#jqueryBtn").click(function () { 
+        $(this).text("Text changed using jQuery"); 
+    }); 
+ 
+    // Set background image using jQuery 
+    $("#bgDiv").css({ 
+        "background-image": "url('1.jpeg')", 
+        "background-size": "cover" 
+    }); 
+ 
+    // Access form data using jQuery 
+    $("#myForm").submit(function (e) { 
+        e.preventDefault(); 
+        let name = $("#name").val(); 
+        let email = $("#email").val(); 
+        alert("Name: " + name + "\nEmail: " + email); 
+    }); 
+ 
+    // Add attribute using jQuery 
+    $("#submitBtn").attr("title", "Submit Form Button"); 
+}); 
+</script> 
+ 
+</body> 
+</html> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
